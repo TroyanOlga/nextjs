@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import SideMenu from '../components/sideMenu';
 
 export default function Home() {
   return (
@@ -9,8 +11,12 @@ export default function Home() {
       </Head>
 
       <main>
+        <SideMenu />
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read{' '}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
         </h1>
 
         <p className="description">
